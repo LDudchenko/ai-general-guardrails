@@ -160,20 +160,3 @@ def main(soft_response: bool):
 
 main(soft_response=False)
 
-# TODO:
-# ---------
-# Create guardrail that will prevent leaks of PII (output guardrail).
-# Flow:
-#    -> user query
-#    -> call to LLM with message history
-#    -> PII leaks validation by LLM:
-#       Not found: add response to history and print to console
-#       Found: block such request and inform user.
-#           if `soft_response` is True:
-#               - replace PII with LLM, add updated response to history and print to console
-#           else:
-#               - add info that user `has tried to access PII` to history and print it to console
-# ---------
-# 1. Complete all to do from above
-# 2. Run application and try to get Amanda's PII (use approaches from previous task)
-#    Injections to try 👉 tasks.PROMPT_INJECTIONS_TO_TEST.md

@@ -1,8 +1,5 @@
-from langchain_core.messages import BaseMessage, SystemMessage, HumanMessage, AIMessage
+from langchain_core.messages import SystemMessage, HumanMessage, AIMessage
 from langchain_openai import ChatOpenAI
-from pydantic import SecretStr
-
-from tasks._constants import OPENAI_API_KEY
 
 
 SYSTEM_PROMPT = """
